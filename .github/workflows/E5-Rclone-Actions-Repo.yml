@@ -20,7 +20,7 @@ jobs:
 
       - name: Add config #解压配置文件
         run: |
-         echo "$RCLONE_CONFIG" | base64 --decode > rclone.conf
+         echo -e "$RCLONE_CONFIG" > rclone.conf
         env:
          RCLONE_CONFIG: ${{ secrets.RCLONE_CONFIG }}
      
